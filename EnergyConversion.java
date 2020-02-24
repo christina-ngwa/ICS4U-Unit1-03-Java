@@ -15,7 +15,7 @@ public class EnergyConversion {
   */
   public static void main(String[] args) throws IOException {
     // variables and constants
-    final long LightSpeed = 2997924582L;
+    final long Lightspeed = 2997924582L;
     final double mass;
     final double convertedEnergy;
     
@@ -33,7 +33,7 @@ public class EnergyConversion {
         
       } else {
         // process
-        convertedEnergy = mass * Math.pow(LightSpeed, 2);
+        convertedEnergy = mass * Math.pow(Lightspeed, 2);
         System.out.print("\nIf the object is " + mass + "kg, it will produce " 
                            + convertedEnergy + "J of energy.");
       }
