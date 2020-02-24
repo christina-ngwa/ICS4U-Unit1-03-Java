@@ -16,8 +16,10 @@ public class EnergyConversion {
   public static void main(String[] args) throws IOException {
     // variables and constants
     final long Lightspeed = 2997924582L;
+    final double oneKiloton = 4.184e12;
     final double mass;
     final double convertedEnergy;
+    final double convertedKiloton;
     
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     
@@ -34,8 +36,11 @@ public class EnergyConversion {
       } else {
         // process
         convertedEnergy = mass * Math.pow(Lightspeed, 2);
+        convertedKiloton = (convertedEnergy / oneKiloton);
         System.out.print("\nIf the object is " + mass + "kg, it will produce " 
                            + convertedEnergy + "J of energy.");
+        System.out.println("\nThis would be the equivalent to a " + convertedKiloton 
+                         + " kiloton bomb.");
       }
     } catch (NumberFormatException nfe) {
       System.err.println("Invalid input. Please try again.");
